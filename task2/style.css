@@ -1,0 +1,162 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh - 20px;
+}
+
+.content {
+    padding: 10px 0;
+    width: 80%;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image__container {
+    /* display: flex; */
+    position: relative;
+    width: calc(20% + 20px);
+    height: 0;
+    padding-bottom: 20%;
+
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.image {
+
+    /* width: 100%;
+    height: 100%; */
+    
+    position: relative;
+    width: 85%;
+    height: 0;
+    padding-bottom: 85%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+
+    border: solid 5px darkgray;
+}
+
+.image:nth-child(4n + 1) {
+    border-color: red;
+}
+
+.image:hover {
+    border-color: yellow;
+    transform: rotate(45deg);
+}
+
+.image__button-remove {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #212121b2;
+    color: white;
+}
+
+.image__button-restore {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    padding: 0 5px;
+    height: 30px;
+    background-color: #212121b2;
+    color: white;
+}
+
+@media screen and (max-width: 900px) {
+    .content {
+        /* width: 90%; */
+    }
+    .image__container {
+        width: 45%;
+
+        padding-bottom: 45%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .image__container {
+        width: 96%;
+        height: 0;
+        padding-bottom: 96%;
+        justify-content: center;
+    }
+    .image {
+        width: 90%;
+
+        padding-bottom: 90%;
+    }
+}
+
+.modal {
+    /* top: 0;
+    position: sticky; */
+    position: fixed;
+    top: 0;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #212121b2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_hide {
+    display: none;
+}
+
+.modal__image {
+    width: 80%;
+}
+
+.modal__close {
+    margin-left: 10px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    justify-self: flex-start;
+    align-self: flex-start;
+    padding: 10px;
+    color: #a0a0a0;
+    font-weight: 700;
+    background-color: #212121b2;
+    border: 0;
+    border-radius: 100%;
+}
