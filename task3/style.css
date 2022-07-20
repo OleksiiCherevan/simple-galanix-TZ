@@ -1,0 +1,47 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#button__send {
+}
+
+#button__reset {
+}
+
+.table {
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.table th, .table tr, .table td{
+    border: 1px solid black;
+}
+
+.table  th {
+    /* background-color: blue; */
+    
+}
+
+.table td {
+    background-color: yellow;
+}
+
+.table td * {
+    display: block;
+}
+
+.table tr td:last-child {
+    width: 40px;
+ 
+}
